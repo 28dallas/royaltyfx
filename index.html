@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyaltyFX - Professional Forex Trading Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>RoyaltyFX</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trading">Trading</a></li>
+                <li><a href="#accounts">Accounts</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login">Login</button>
+                <button class="btn-register">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Trade Forex Like a Pro</h1>
+            <p>Join thousands of successful traders on our advanced platform. Start with as little as $10 and access global markets 24/7.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Start Trading Now</button>
+                <button class="btn-secondary">Try Demo Account</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>50,000+</h3>
+                    <p>Active Traders</p>
+                </div>
+                <div class="stat">
+                    <h3>$2.5B+</h3>
+                    <p>Monthly Volume</p>
+                </div>
+                <div class="stat">
+                    <h3>0.1s</h3>
+                    <p>Execution Speed</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="trading-chart">
+                <canvas id="chart" width="400" height="300"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose RoyaltyFX?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Advanced Trading Tools</h3>
+                    <p>Professional charts, technical indicators, and automated trading strategies.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Regulated & Secure</h3>
+                    <p>Licensed by top financial authorities with segregated client funds.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Trading</h3>
+                    <p>Trade anywhere with our award-winning mobile app for iOS and Android.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Get help when you need it with our multilingual customer support team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trading Section -->
+    <section id="trading" class="trading-section">
+        <div class="container">
+            <h2>Trading Instruments</h2>
+            <div class="instruments-grid">
+                <div class="instrument">
+                    <h3>Forex Pairs</h3>
+                    <p>Trade major, minor, and exotic currency pairs with tight spreads</p>
+                    <ul>
+                        <li>EUR/USD from 0.1 pips</li>
+                        <li>GBP/USD from 0.2 pips</li>
+                        <li>USD/JPY from 0.1 pips</li>
+                    </ul>
+                </div>
+                <div class="instrument">
+                    <h3>Commodities</h3>
+                    <p>Access gold, silver, oil, and agricultural products</p>
+                    <ul>
+                        <li>Gold (XAU/USD)</li>
+                        <li>Silver (XAG/USD)</li>
+                        <li>Crude Oil (WTI)</li>
+                    </ul>
+                </div>
+                <div class="instrument">
+                    <h3>Indices</h3>
+                    <p>Trade global stock indices with leverage</p>
+                    <ul>
+                        <li>S&P 500</li>
+                        <li>NASDAQ 100</li>
+                        <li>FTSE 100</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Types -->
+    <section id="accounts" class="accounts-section">
+        <div class="container">
+            <h2>Choose Your Account Type</h2>
+            <div class="accounts-grid">
+                <div class="account-card">
+                    <h3>Starter</h3>
+                    <div class="price">$10</div>
+                    <p>Minimum Deposit</p>
+                    <ul>
+                        <li>Spreads from 1.2 pips</li>
+                        <li>1:100 Leverage</li>
+                        <li>Basic Support</li>
+                        <li>Web Platform</li>
+                    </ul>
+                    <button class="btn-account">Open Account</button>
+                </div>
+                <div class="account-card featured">
+                    <h3>Professional</h3>
+                    <div class="price">$500</div>
+                    <p>Minimum Deposit</p>
+                    <ul>
+                        <li>Spreads from 0.5 pips</li>
+                        <li>1:200 Leverage</li>
+                        <li>Priority Support</li>
+                        <li>All Platforms</li>
+                        <li>Trading Signals</li>
+                    </ul>
+                    <button class="btn-account">Open Account</button>
+                </div>
+                <div class="account-card">
+                    <h3>VIP</h3>
+                    <div class="price">$5,000</div>
+                    <p>Minimum Deposit</p>
+                    <ul>
+                        <li>Spreads from 0.1 pips</li>
+                        <li>1:500 Leverage</li>
+                        <li>Dedicated Manager</li>
+                        <li>All Platforms</li>
+                        <li>Premium Signals</li>
+                        <li>Market Analysis</li>
+                    </ul>
+                    <button class="btn-account">Open Account</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2>Learn to Trade</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Trading Academy</h3>
+                    <p>Comprehensive courses from beginner to advanced levels</p>
+                </div>
+                <div class="education-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Tutorials</h3>
+                    <p>Step-by-step video guides for platform and strategies</p>
+                </div>
+                <div class="education-card">
+                    <i class="fas fa-calendar"></i>
+                    <h3>Webinars</h3>
+                    <p>Live trading sessions with professional analysts</p>
+                </div>
+                <div class="education-card">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>Market News</h3>
+                    <p>Daily market analysis and economic calendar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RoyaltyFX</h3>
+                    <p>Your trusted partner in forex trading. Licensed and regulated for your security.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Trading</h4>
+                    <ul>
+                        <li><a href="#">Forex</a></li>
+                        <li><a href="#">Commodities</a></li>
+                        <li><a href="#">Indices</a></li>
+                        <li><a href="#">Cryptocurrencies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Risk Disclosure</a></li>
+                        <li><a href="#">Regulations</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RoyaltyFX. All rights reserved. Trading involves risk of loss.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

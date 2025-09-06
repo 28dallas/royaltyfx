@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyaltyFX - Trading Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="logo"><i class="fas fa-chart-line"></i></div>
+            <div class="nav-item active"><i class="fas fa-home"></i><span>Trade</span></div>
+            <div class="nav-item"><i class="fas fa-wallet"></i><span>Finances</span></div>
+            <div class="nav-item"><i class="fas fa-user"></i><span>Profile</span></div>
+            <div class="nav-item"><i class="fas fa-mobile-alt"></i><span>Apps</span></div>
+            <div class="nav-item"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
+            <div class="nav-item"><i class="fas fa-question-circle"></i><span>Help</span></div>
+            <div class="nav-item"><i class="fas fa-trophy"></i><span>Battles</span></div>
+            <div class="nav-item"><i class="fas fa-gift"></i><span>Invite and Earn</span></div>
+        </div>
+
+        <div class="main-area">
+            <div class="top-bar">
+                <div class="balance-section">
+                    <div class="balance-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <div>
+                            <div class="amount">$0.00</div>
+                            <div class="label">real balance</div>
+                        </div>
+                    </div>
+                    <div class="balance-item">
+                        <i class="fas fa-coins"></i>
+                        <div class="finances-btn">Finances</div>
+                    </div>
+                    <div class="balance-item">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                </div>
+                <div class="currency-pair">
+                    <i class="fas fa-flag-usa"></i>
+                    <span>EUR / USD (OTC)</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="user-section">
+                    <i class="fas fa-chevron-down"></i>
+                    <span>Deals</span>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+
+            <div class="chart-area">
+                <canvas id="chart" width="1200" height="500"></canvas>
+                <div class="price-info">
+                    <div class="current-price">1.082708</div>
+                    <div class="price-change">$1.08</div>
+                </div>
+                
+                <!-- Tutorial Popup -->
+                <div class="tutorial-popup">
+                    <div class="step-indicator">Step 4 / 10</div>
+                    <div class="tutorial-content">
+                        <h3>You can set the amount you're willing to invest</h3>
+                        <div class="tutorial-buttons">
+                            <button class="next-btn">Next</button>
+                            <button class="skip-btn">Skip</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-tools">
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-square"></i>
+                <i class="fas fa-exclamation-triangle"></i>
+                <i class="fas fa-pen"></i>
+                <i class="fas fa-undo"></i>
+                <i class="fas fa-snowflake"></i>
+                <i class="fas fa-minus"></i>
+                <i class="fas fa-plus"></i>
+            </div>
+
+            <div class="trading-panel">
+                <div class="amount-section">
+                    <i class="fas fa-plus"></i>
+                    <div class="amount">$1<br><span>Investment</span></div>
+                </div>
+                <div class="trade-buttons">
+                    <div class="sell-btn">
+                        <i class="fas fa-arrow-down"></i>
+                        <div>SELL<br><span>86%</span></div>
+                    </div>
+                    <div class="buy-btn">
+                        <i class="fas fa-arrow-up"></i>
+                        <div>BUY<br><span>86%</span></div>
+                    </div>
+                </div>
+                <div class="timer-section">
+                    <i class="fas fa-arrow-up"></i>
+                    <div class="timer">00:05<br><span>deal duration</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="deals-header">Deals</div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

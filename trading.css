@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1d29;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 70px;
+    background: #252836;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    color: #4f9cf9;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 5px 0;
+    color: #8b8d97;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s;
+    width: 50px;
+}
+
+.nav-item:hover, .nav-item.active {
+    background: #4f9cf9;
+    color: white;
+}
+
+.nav-item i {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.nav-item span {
+    font-size: 10px;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #252836;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3a3d4a;
+}
+
+.balance .amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4f9cf9;
+}
+
+.balance .type {
+    font-size: 12px;
+    color: #8b8d97;
+    margin-left: 10px;
+}
+
+.currency-selector select {
+    background: #3a3d4a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.chart-container {
+    flex: 1;
+    padding: 20px;
+    background: #1a1d29;
+}
+
+#tradingChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.trading-panel {
+    background: #252836;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #3a3d4a;
+}
+
+.investment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.investment-section label {
+    font-size: 12px;
+    color: #8b8d97;
+    margin-bottom: 5px;
+}
+
+.investment-section input {
+    background: #3a3d4a;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    width: 80px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.investment-section span {
+    color: #4f9cf9;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.trade-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.sell-btn, .buy-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+    min-width: 100px;
+}
+
+.sell-btn {
+    background: #ff4757;
+    color: white;
+}
+
+.buy-btn {
+    background: #2ed573;
+    color: white;
+}
+
+.sell-btn:hover, .buy-btn:hover {
+    transform: scale(1.05);
+}
+
+.sell-btn i, .buy-btn i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.payout {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.duration-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.duration-section label {
+    font-size: 12px;
+    color: #8b8d97;
+    margin-bottom: 5px;
+}
+
+.duration-section select {
+    background: #3a3d4a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
