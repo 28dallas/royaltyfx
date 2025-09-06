@@ -15,11 +15,11 @@ function showRegister() {
 function handleLogin(event) {
     event.preventDefault();
     localStorage.setItem('userLoggedIn', 'true');
-    window.location.href = 'dashboard.html';
+    window.location.href = 'app.html';
 }
 
 function handleRegister(event) {
     event.preventDefault();
     localStorage.setItem('userLoggedIn', 'true');
-    window.location.href = 'dashboard.html';
+    window.location.href = 'app.html';
 }

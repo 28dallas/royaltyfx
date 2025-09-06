@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1d29;
+    color: white;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 70px;
+    background: #252836;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    color: #4f9cf9;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 5px 0;
+    color: #8b8d97;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s;
+    width: 50px;
+}
+
+.nav-item:hover, .nav-item.active {
+    background: #4f9cf9;
+    color: white;
+}
+
+.nav-item.logout:hover {
+    background: #ff4757;
+}
+
+.nav-item i {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.nav-item span {
+    font-size: 10px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar {
+    background: #252836;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3a3d4a;
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.balance {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4f9cf9;
+}
+
+.account-type, .language-toggle select {
+    background: #3a3d4a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* Trading Interface */
+.trading-interface {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.chart-section {
+    background: #252836;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.currency-selector select {
+    background: #3a3d4a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.current-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4f9cf9;
+}
+
+.chart-container {
+    height: 400px;
+    position: relative;
+}
+
+#tradingChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Trading Controls */
+.trading-controls {
+    background: #252836;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.investment-section label,
+.duration-section label {
+    display: block;
+    margin-bottom: 10px;
+    color: #8b8d97;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.amount-input {
+    display: flex;
+    align-items: center;
+    background: #3a3d4a;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.amount-input button {
+    background: #4f9cf9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.amount-input input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.quick-amounts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.quick-amounts button {
+    background: #3a3d4a;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.3s;
+}
+
+.quick-amounts button:hover {
+    background: #4f9cf9;
+}
+
+.trade-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.sell-btn, .buy-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.sell-btn {
+    background: #ff4757;
+    color: white;
+}
+
+.buy-btn {
+    background: #2ed573;
+    color: white;
+}
+
+.sell-btn:hover, .buy-btn:hover {
+    transform: scale(1.05);
+}
+
+.sell-btn i, .buy-btn i {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.payout {
+    font-size: 12px;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.duration-section select {
+    width: 100%;
+    background: #3a3d4a;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Active Trades */
+.active-trades {
+    background: #252836;
+    margin: 0 20px 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.active-trades h3 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.trades-list {
+    min-height: 60px;
+}
+
+.no-trades {
+    color: #8b8d97;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
+
+.trade-item {
+    background: #3a3d4a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trade-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.trade-pair {
+    font-weight: bold;
+    color: white;
+}
+
+.trade-details {
+    font-size: 12px;
+    color: #8b8d97;
+}
+
+.trade-status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.trade-status.active {
+    background: #4f9cf9;
+    color: white;
+}
+
+.trade-status.win {
+    background: #2ed573;
+    color: white;
+}
+
+.trade-status.loss {
+    background: #ff4757;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .trading-interface {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+    
+    .chart-container {
+        height: 300px;
+    }
+    
+    .trading-controls {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .investment-section,
+    .duration-section {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .trade-buttons {
+        width: 100%;
+        order: 3;
+    }
+}

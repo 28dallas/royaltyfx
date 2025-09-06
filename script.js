@@ -240,3 +240,22 @@ window.addEventListener('scroll', () => {
         header.style.backdropFilter = 'none';
     }
 });
+
+// FAQ Toggle Function
+function toggleFAQ(element) {
+    const faqItem = element.parentElement;
+    const answer = faqItem.querySelector('.faq-answer');
+    const isActive = element.classList.contains('active');
+    
+    // Close all other FAQ items
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.classList.remove('active');
+        q.parentElement.querySelector('.faq-answer').classList.remove('active');
+    });
+    
+    // Toggle current item
+    if (!isActive) {
+        element.classList.add('active');
+        answer.classList.add('active');
+    }
+}

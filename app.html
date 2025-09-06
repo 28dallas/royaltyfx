@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyaltyFX - Trading App</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo"><i class="fas fa-chart-line"></i></div>
+            <div class="nav-item active" data-page="dashboard"><i class="fas fa-home"></i><span>Dashboard</span></div>
+            <div class="nav-item" data-page="wallet"><i class="fas fa-wallet"></i><span>Wallet</span></div>
+            <div class="nav-item" data-page="profile"><i class="fas fa-user"></i><span>Profile</span></div>
+            <div class="nav-item" data-page="education"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
+            <div class="nav-item logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i><span>Logout</span></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="account-info">
+                    <div class="balance">
+                        <span class="amount">$1,247.50</span>
+                        <select class="account-type">
+                            <option value="real">Real Account</option>
+                            <option value="demo">Demo Account</option>
+                        </select>
+                    </div>
+                    <div class="language-toggle">
+                        <select>
+                            <option value="en">EN</option>
+                            <option value="es">ES</option>
+                            <option value="fr">FR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trading Interface -->
+            <div class="trading-interface">
+                <!-- Chart Section -->
+                <div class="chart-section">
+                    <div class="chart-header">
+                        <div class="currency-selector">
+                            <select id="currencyPair" onchange="changeCurrencyPair()">
+                                <option value="EURUSD">EUR/USD</option>
+                                <option value="GBPUSD">GBP/USD</option>
+                                <option value="USDJPY">USD/JPY</option>
+                                <option value="BTCUSD">BTC/USD</option>
+                            </select>
+                        </div>
+                        <div class="current-price" id="currentPrice">1.08506</div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="tradingChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Trading Controls -->
+                <div class="trading-controls">
+                    <div class="investment-section">
+                        <label>Investment Amount</label>
+                        <div class="amount-input">
+                            <button onclick="changeAmount(-1)">-</button>
+                            <input type="number" id="investment" value="1" min="1" max="1000">
+                            <button onclick="changeAmount(1)">+</button>
+                        </div>
+                        <div class="quick-amounts">
+                            <button onclick="setAmount(1)">$1</button>
+                            <button onclick="setAmount(5)">$5</button>
+                            <button onclick="setAmount(10)">$10</button>
+                            <button onclick="setAmount(25)">$25</button>
+                        </div>
+                    </div>
+
+                    <div class="trade-buttons">
+                        <button class="sell-btn" onclick="executeTrade('SELL')">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>SELL</span>
+                            <span class="payout">85%</span>
+                        </button>
+                        <button class="buy-btn" onclick="executeTrade('BUY')">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>BUY</span>
+                            <span class="payout">85%</span>
+                        </button>
+                    </div>
+
+                    <div class="duration-section">
+                        <label>Deal Duration</label>
+                        <select id="duration">
+                            <option value="5">5 seconds</option>
+                            <option value="15">15 seconds</option>
+                            <option value="30">30 seconds</option>
+                            <option value="60">1 minute</option>
+                            <option value="300">5 minutes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Trades -->
+            <div class="active-trades">
+                <h3>Active Trades</h3>
+                <div id="tradesList" class="trades-list">
+                    <p class="no-trades">No active trades</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
